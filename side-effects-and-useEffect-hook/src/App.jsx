@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect, useCallback } from "react";
-
 import Places from "./components/Places.jsx";
 import { AVAILABLE_PLACES } from "./data.js";
 import Modal from "./components/Modal.jsx";
@@ -47,7 +46,7 @@ function App() {
       return [place, ...prevPickedPlaces];
     });
 
-    //make sure not to store the existing id in the list
+    //not to store the existing id in the list
     const storedIds = JSON.parse(localStorage.getItem("selectedPlaces")) || [];
     if (storedIds.indexOf(id) === -1) {
       localStorage.setItem(
