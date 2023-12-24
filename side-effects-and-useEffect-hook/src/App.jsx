@@ -46,7 +46,7 @@ function App() {
       return [place, ...prevPickedPlaces];
     });
 
-    //not to store the existing id in the list
+    //make aure not to store the existing id in the list
     const storedIds = JSON.parse(localStorage.getItem("selectedPlaces")) || [];
     if (storedIds.indexOf(id) === -1) {
       localStorage.setItem(
