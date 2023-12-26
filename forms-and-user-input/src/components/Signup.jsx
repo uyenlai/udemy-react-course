@@ -6,6 +6,9 @@ export default function Signup() {
     const data = Object.fromEntries(fd.entries());
     data.acquisition = acquisitionList;
     console.log(data);
+
+    //reset the form
+    //e.target.reset()
   }
 
   return (
