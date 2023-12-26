@@ -1,10 +1,13 @@
 import { useState } from "react";
 
-export default function Login() {
+export default function StateLogin() {
   const [enteredValue, setEnteredValue] = useState({
     email: "",
     password: "",
   });
+
+  const emailIsInvalid =
+    enteredValue.email !== "" && !enteredValue.email.includes("@");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -47,6 +50,9 @@ export default function Login() {
             onChange={(e) => handleValueChange(e, "password")}
           />
         </div>
+      </div>
+      <div className="control-error">
+        {emailIsInvalid && <p>Please enter an valid email!</p>}
       </div>
 
       <p className="form-actions">
