@@ -11,8 +11,8 @@ export default function AvailablePlaces({ onSelectPlace }) {
 
   useEffect(() => {
     async function fetchPlaces() {
+      setIsFetching(true);
       try {
-        setIsFetching(true);
         const places = await fetchAvailablePlaces();
         navigator.geolocation.getCurrentPosition((pos) => {
           const sortedPlaces = sortPlacesByDistance(
