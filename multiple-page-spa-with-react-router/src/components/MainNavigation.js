@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 
 export default function MainNavigation() {
@@ -7,10 +7,28 @@ export default function MainNavigation() {
       <nav>
         <ul className={classes.list}>
           <li>
-            <Link to="/">Home Page</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+              //   style={({ isActive }) => ({
+              //     textAlign: isActive ? "center" : "left",
+              //   })} -> inline-style
+              end
+            >
+              Home Page
+            </NavLink>
           </li>
           <li>
-            <Link to="/products">Products Page</Link>
+            <NavLink
+              to="/products"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+            >
+              Products Page
+            </NavLink>
           </li>
         </ul>
       </nav>
