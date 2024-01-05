@@ -5,7 +5,6 @@ function EventsPage() {
   const events = useLoaderData();
   return <EventsList events={events} />;
 }
-
 export default EventsPage;
 
 export async function loader() {
