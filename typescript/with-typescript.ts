@@ -1,5 +1,5 @@
-const add = (a: number, b: number) => {
-    console.log(a + b)
-}
+var add = (a: number, b: number) => {
+  console.log(a + b);
+};
 
-add(2, 5)
+add(2, 5);
