@@ -1,4 +1,5 @@
 const redux = require("redux");
+import { createStore } from "https://cdn.skypack.dev/redux";
 
 //create Reducer function
 const stateReducer = (state = { counter: 0 }, action) => {
@@ -18,6 +19,7 @@ const stateReducer = (state = { counter: 0 }, action) => {
 };
 //create store
 const store = redux.createStore(stateReducer);
+//console.log(store);
 
 //the subcribe between the store and the subcriber
 const counterSubcriber = () => {

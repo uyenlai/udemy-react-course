@@ -63,3 +63,27 @@ products = [
   { id: 1, name: "Glasses", price: 15 },
   { id: 2, name: "T-Shirt", price: 65 },
 ];
+
+//Functions and types
+
+function add(a: number, b: number): string | number {
+  return a + b;
+}
+
+function printOutput(value: any) {
+  console.log(value);
+}
+
+//Generics
+function insertValue<T>(array: T[], value: T) {
+  const newArray = [value, ...array];
+  return newArray;
+}
+
+const initialArray = [1, 2, 3];
+const value = 0;
+
+const updatedArray = insertValue(initialArray, value);
+const stringArray = insertValue(["summer", "fall", "winter"], "spring");
+
+stringArray[0].split("");
